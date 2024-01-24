@@ -7,18 +7,22 @@ const fetchPokemonDetails = async (pokemonUrl) => {
   return data;
 };
 
-const fetchPokemons = async () => {
+const fetchPokemons = async (offset = 0) => {
   const query = `
-    query {
-      pokemons(limit: 44) {
-        results {
-          id
-          name
-          url
-        }
+  query GetPokemons($offset: Int) {
+    pokemons(offset: $offset, limit: 48) {
+      results {
+        id
+        name
+        url
       }
     }
+  }
   `;
+
+  const variables = {
+    offset,
+  };
 
   const response = await fetch(
     "https://graphql-pokeapi.vercel.app/api/graphql",
@@ -27,7 +31,7 @@ const fetchPokemons = async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query, variables }),
     }
   );
 
