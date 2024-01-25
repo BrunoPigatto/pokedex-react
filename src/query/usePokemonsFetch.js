@@ -10,7 +10,7 @@ const fetchPokemonDetails = async (pokemonUrl) => {
 const fetchPokemons = async (offset = 0) => {
   const query = `
   query GetPokemons($offset: Int) {
-    pokemons(offset: $offset, limit: 48) {
+    pokemons(offset: $offset, limit: 45) {
       results {
         id
         name
