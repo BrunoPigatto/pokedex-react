@@ -10,7 +10,7 @@ Algumas funcionalidades:
 
 - [x] Filtro de gerações.
 - [x] Paginação.
-- [x] Ao clicar no card, o pokémon irá se transformar na sua versão shiny.
+- [x] Ao clicar no card, o pokémon irá se transformar em sua versão shiny.
 
 ## 🖥️ Instalação
 
