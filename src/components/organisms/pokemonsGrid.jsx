@@ -49,7 +49,7 @@ const LoadingContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 200px;
-  margin-bottom: 400px;
+  margin-bottom: 800px;
 
   div {
     display: flex;
